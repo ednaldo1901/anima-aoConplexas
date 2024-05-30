@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 80px;
+
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(90deg, black, red, green);
+    border-radius: 10px;
+}
+
+.box {
+    animation-name: exemplo;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-duration: alternate-reverse;
+}
+
+button{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, rgb(160, 99, 99), red);
+    box-shadow: 8px 12px 8px rgb(92, 81, 81);
+    animation:  anicion-buton 3s linear infinite ;
+}
+
+button:hover{
+    cursor: pointer;
+    filter: brightness(1.2) contrast(1.5);
+}
+
+div{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    gap: 10px;
+}
+
+.loader{
+    border: 5px solid rebeccapurple;
+    border-radius: 50%;
+    margin: 8px;
+    box-shadow: 2px 3px 2px rgb(139, 124, 124);
+   /* animation: loader .8s ease-in-out alternate infinite; */
+}
+
+.loader:nth-child(1) {
+    animation: loader .8s ease-in-out alternate infinite;
+}
+.loader:nth-child(2) {
+    animation: loader .8s ease-in-out  .3s alternate infinite;
+}
+
+.loader:nth-child(3) {
+    animation: loader .8s ease-in-out  .6s alternate infinite;
+}
+
+.foguete{
+    display: flex;
+    width: 30vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(34, 34, 34)0%, rgb(34, 13, 80)50%, rgb(74, 153, 230)100%);
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 400px;
+    height: 380px;
+    animation: decolagem-foguete 10s ease-in-out infinite alternate;
+}
+
+
+
+
+@keyframes exemplo {
+    from {
+        background: blue;
+        width: 100px;
+        height: 100px;
+        box-shadow: 10px 15px 10px rgb(129, 112, 112);
+    }
+    50%{
+        background: black;
+        border-radius: 50%;
+        transform: rotate(360deg);
+        width: 200px;
+        height: 200px;
+        box-shadow: 10px 15px 10px rgb(129, 112, 112);
+    }
+
+    to {
+        background: darkmagenta;
+        width: 100px;
+        height: 100px;
+        box-shadow: 10px 15px 10px rgb(129, 112, 112);
+       
+    }
+}
+
+@keyframes anicion-buton {
+    0%{
+        transform: rotate(0);
+    }
+
+    15%{
+        transform: rotate(-15deg);
+    }
+    20%{
+        transform: rotate(15deg);
+    }
+
+    25%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+
+    35%{
+        transform: rotate(-10deg);
+    }
+    40%, 100%{
+        transform: rotate(0);
+    }
+        
+    }
+
+@keyframes loader {
+    to {
+        transform: scale(1.8);
+    }
+}
+
+@keyframes decolagem-foguete {
+
+    0%{
+       transform: translateY(20vh);
+    }
+
+    50%{
+        transform: translateY(-80vh);
+    }
+
+    80%{
+        transform: rotate(30deg);
+    }
+
+    100%{
+        transform: translateY(20vh) ;
+     }
+    
+}
